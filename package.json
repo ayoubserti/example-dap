@@ -1,0 +1,28 @@
+{
+  "name": "test_remote_debugger",
+  "version": "1.0.0",
+  "description": "test for 4D remote debugger",
+  "main": "index.js",
+  "dependencies": {
+    "vscode-debugadapter": "^1.41.1"
+  },
+  "scripts": {
+    "vscode:prepublish": "webpack --mode production && npm run copyfile",
+    "webpack": "webpack --mode development",
+    "webpack-dev": "webpack --mode development --watch",
+    "test-compile": "tsc -p ./",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./dist/test/runTest.js",
+    "copyfile": "node ./tools/postbuild.js"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "ts-loader": "^6.2.0",
+    "tslint": "^5.12.1",
+    "typescript": "^3.9.7"
+  },
+  "author": "Ayoub Serti",
+  "license": "ISC"
+}
